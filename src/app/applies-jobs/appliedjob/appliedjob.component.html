@@ -1,0 +1,36 @@
+<!-- <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Descritpion</th>
+      <th scope="col">Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of appliedJobs">
+      <th>{{item.name}}</th>
+      <th>{{item.description}}</th>
+      <th>{{item.rating}}</th>
+      <th><button type="button" class="btn btn-primary">View Details</button></th>
+    </tr>
+  </tbody>
+</table> -->
+
+<table class="table" *ngIf="appliedJobs">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Descritpion</th>
+      <th scope="col">Company</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of appliedJobs">
+      <th>{{item.name}}</th>
+      <th>{{item.description}}</th>
+      <th>{{item.company}}</th>
+      <th><button type="button" class="btn btn-primary">View Details</button></th>
+    </tr>
+  </tbody>
+</table>

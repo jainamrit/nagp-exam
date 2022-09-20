@@ -1,0 +1,32 @@
+<div class="card" *ngIf="company">
+  <h3 class="card-text" style="text-align: center;">{{company.name}} Details
+  </h3>
+  <div class="card-body">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <p class="text-info">Desctiption: {{company.description}}</p>
+        </div>
+        <div class="col">
+          <p class="text-info">Establised: {{company.establised}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="text-info">Headquaters: {{company.headquaters}}</p>
+        </div>
+        <div class="col">
+          <p class="text-info">NumberOfEMployees: {{company.numberOfEMployees}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="text-info">Rating: {{company.rating}}</p>
+        </div>
+        <div class="col">
+          <p class="text-info">Type: {{company.type}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

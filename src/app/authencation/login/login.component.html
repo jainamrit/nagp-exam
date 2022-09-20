@@ -1,0 +1,12 @@
+<div class="card text-center">
+  <div class="card-header">
+    Login
+  </div>
+  <form class="card-body" [formGroup]="form">
+    <input type="email" class="form-control" placeholder="name@example.com" formControlName="email"><br>
+    <input type="text" class="form-control" placeholder="password" formControlName="password">
+  </form>
+  <div class="card-footer text-muted">
+    <button type="button" class="btn btn-primary" (click)="login()" [disabled]="!form.valid">Go somewhere</button>
+  </div>
+</div>

@@ -1,18 +1,17 @@
+import { BehaviorSubject, Observable } from "rxjs";
+
 /**
  * Common utilities
  */
 export class CommonUtilities {
-  /**
-   * Makeids signup component
-   * @returns makeid
-   */
-  public static generateId(): string {
-    let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const charactersLength = characters.length;
-    for (let i = 0; i < 10; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
+  private static  isUserlogin = new BehaviorSubject<boolean>(false);
+
+  public static setUserlogin(value: boolean) {
+    this.isUserlogin.next(true);
+
+  }
+
+  public static getloginUser(): Observable<boolean> {
+    return this.isUserlogin.asObservable();
   }
 }
